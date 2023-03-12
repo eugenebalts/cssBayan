@@ -7,16 +7,17 @@
 html {
     user-select: none;
     overflow-y: scroll;
+    scroll-behavior:smooth;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+    font-size: 1rem;
     background-color: rgba(39, 70, 62, 0.8);
     color: rgba(0, 0, 0, 0.7);
 }
 
     h1 {
+        color: whitesmoke;
         font-size: 2rem;
     }
     
@@ -29,6 +30,7 @@ body {
     
     .header-title {
         padding: 1.5rem;
+        text-align: center;
         border-bottom: 0.2rem solid rgba(255, 255, 255, 0.1);
     }
     
@@ -47,25 +49,28 @@ body {
     
     .accordion_selection_list {
         border-bottom: 0.15rem solid rgba(255, 255, 255, 0.1);
-        margin-bottom: 1rem;
+        padding-top: 1rem;
         cursor: pointer;
     }
     
     .accordion_selection_list:nth-last-child(1) {
         border: none;
+        
     }
     
     .accordion_selection_list_input {
         display: none;
     }
 
+    .accordion_selection_list_text {
+        transition: color .2s linear;
+    }
     
     .accordion_selection_list_visible {
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-weight: 700;
-        font-size: 1rem;
     }
     
     /* .accordion_selection_list_visible_switch {
@@ -102,20 +107,20 @@ body {
     }
 
     .accordion_selection_list_input:checked + .accordion_selection_list_text {
-        color: rgb(205, 205, 205)
+        color: whitesmoke;
     }
     
     
     .accordion_selection .accordion_selection_list_input:checked + .accordion_selection_list_text .accordion_selection_list_visible_switch img {
         transform: rotate(45deg) translateY(-50%);
     }
-    
-
-
 
 /* ---------------------------------------- MEDIA 820 px ----------------------------*/
 @media (min-width: 820px) {
 
+    body {
+        font-size: 1.1rem;
+    }
     .container {
         max-width: 80%;
     }
@@ -123,18 +128,27 @@ body {
     .accordion_selection_list_input:checked + .accordion_selection_list_text .accordion_selection_meme {
         height: 30vw;
         width: 30vw;
-        padding: 5%;
+        padding: 2%;
+    }
+
+    h1 {
+        font-size: 2.2rem;
     }
     
 
 
 }
 
+/*            MEDIA 1920 MADE FOR 1440px       ------------------                  */
 
-@media (min-width: 1920px) {
+@media (min-width: 1440px) {
+
+    body {
+        font-size: 1.3rem;
+    }
 
     h1 {
-        font-size: 3rem
+        font-size: 2.6rem
     }
 
     .container {
@@ -149,37 +163,52 @@ body {
     /* MAIN */
 
 
+    .accordion_selection {
+        transition: color .1s linear;
+
+    }
+
+    .accordion_selection:hover {
+        color:whitesmoke;
+    }
+
+    .accordion_selection_list_text {
+        transition: color .1s linear;
+    }
+
     .accordion_selection_list_text {
         cursor: pointer;
     }
 
+    .accordion_selection_list_text:active {
+        color: rgba(0, 0, 0, 0.7);
+    }
+
+
     .accordion_selection_list:hover .accordion_selection_list_answer .accordion_selection_meme {
-        height: 25vw;
-        width: 25vw;
+        height: 20vw;
+        width: 20vw;
         padding: 2%;
     }
+
+        .accordion_selection_list:hover .accordion_selection_list_text .accordion_selection_list_visible_switch img {
+        transform: rotate(45deg) translateY(-50%);
+    }
+
     
     .accordion_selection_list_visible {
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-weight: 700;
-        font-size: 1.3rem;
     }
 
 
     .accordion_selection_list_input:checked + .accordion_selection_list_text .accordion_selection_meme {
-        height: 25vw;
-        width: 25vw;
+        height: 20vw;
+        width: 20vw;
         padding: 2%;
     }
-
-
-
-
-    
-
-
 
 }
 
