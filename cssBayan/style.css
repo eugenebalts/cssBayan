@@ -184,6 +184,16 @@ body {
         .accordion_selection_list:hover .accordion_selection_list_text .accordion_selection_list_visible_switch img {
         transform: rotate(45deg) translateY(-50%);
     }
+    
+        .accordion_selection_list_visible_switch {
+        opacity: 0;
+        transition: all .2s linear;
+    }
+    
+    .accordion_selection:hover .accordion_selection_list_visible_switch {
+        opacity: 1;
+    }
+
 
     
     .accordion_selection_list_visible {
