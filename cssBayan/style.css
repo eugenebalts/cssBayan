@@ -195,6 +195,9 @@ body {
         width: 20vw;
         padding: 2%;
     }
+            .accordion_selection_list_input:checked + .accordion_selection_list_text:active   {
+color:rgba(0, 0, 0, 0.7)
+    }
 }
 
 /*            MEDIA TASK -1920 (but you can make a lower), MAKING FOR 1440px       ------------------                  */
