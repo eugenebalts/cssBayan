@@ -28,6 +28,10 @@ body {
     
     /* HEADER */
     
+        header p {
+        font-size: 1rem;
+    }
+    
     .header-title {
         padding: 1.5rem;
         text-align: center;
