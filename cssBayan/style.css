@@ -62,6 +62,10 @@ body {
     }
     
     .accordion_selection_list_input {
+        transform: scale(0);
+        opacity: 0;
+        appearance: none;
+        display: block;
     }
 
     .accordion_selection_list_text {
