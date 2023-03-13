@@ -158,6 +158,13 @@ body {
     .accordion_selection_list_text {
         cursor: pointer;
     }
+    
+        .accordion_selection_list_answer {
+        transition: all .2s linear;
+    }
+        .accordion_selection_list_text:active .accordion_selection_list_answer {
+        opacity: 0.8;
+    }
 
     .accordion_selection_list_text:active {
         color: rgba(0, 0, 0, 0.7);
