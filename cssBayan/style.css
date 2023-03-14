@@ -145,7 +145,7 @@ body {
 /* INTERACTIVE FOR DESCTOP */
 
 
-@media (min-width: 1024px) {
+@media (hover: hover) {
     .accordion_selection {
         transition: color .1s linear;
 
